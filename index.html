@@ -7,6 +7,58 @@
 	<title>Document</title>
 	<style>
 		/* Your styles here! */
+		.main {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 2em;
+		}
+
+		article {
+			display: flex;
+			justify-content: center;
+			background-color: aqua;
+			padding: 1rem;
+			column-gap: 15px;
+			max-width: 500px;
+		}
+
+		.image {
+			width: 200px;
+			height: 200px;
+
+		}
+
+		.features-list {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.features-list > div {
+			background-color: white;
+			border-radius: 5px;
+			margin: 2px;
+			padding: 5px;
+		}
+
+		@media only screen and (max-width: 500px) {
+			.main {
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-gap: 2em;
+			}
+
+			article {
+				flex-direction: column;
+				max-width: 400px;
+				
+			}
+
+			.image {
+				width: 400px;
+				height: 400px;
+				object-fit: cover;
+			}
+		  }
 		
 	</style>
 </head>
